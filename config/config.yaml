@@ -112,29 +112,84 @@ platforms:
   - id: "juejin"              
     name: "掘金"
   # ===== 极稳定补充平台（追加部分）=====
-  - id: "zhihu-hot"
-    name: "知乎热榜"
-  - id: "bilibili-hot"
-    name: "B站热榜"
-  - id: "caijing"
-    name: "财联社"
-  - id: "36kr"
+  - id: "_36kr"
     name: "36氪"
-  - id: "eastmoney"
-    name: "东方财富"
-  - id: "huxiu"
-    name: "虎嗅"
-  - id: "guancha"
-    name: "观察者网"
-  - id: "163"
-    name: "网易热榜"
-  - id: "github-trending"
-    name: "GitHub Trending"
-  - id: "ngabbs"
-    name: "NGA"
-  - id: "hostloc"
-    name: "Hostloc"
-  - id: "segmentfault"
-    name: "SegmentFault"
-  - id: "mit"
-    name: "MIT科技评论"
+  - id: "cankaoxiaoxi"
+    name: "参考消息"
+  - id: "chongbuluo"
+    name: "虫部落"
+  - id: "douban"
+    name: "豆瓣"
+  - id: "fastbull"
+    name: "FastBull 财经资讯"
+  - id: "gelonghui"
+    name: "格隆汇"
+  - id: "ghxi"
+    name: "果核剥壳"
+  - id: "github"
+    name: "GitHub"
+  - id: "hackernews"
+    name: "Hacker News"
+  - id: "jin10"
+    name: "金十数据"
+  - id: "kaopu"
+    name: "靠谱新闻源"
+  - id: "kuaishou"
+    name: "快手"
+  - id: "linuxdo"
+    name: "Linux.do 社区"
+  - id: "mktnews"
+    name: "MKTNews 财经快讯"
+  - id: "nowcoder"
+    name: "牛客网"
+  - id: "pcbeta"
+    name: "远景论坛 (PCBeta)"
+  - id: "producthunt"
+    name: "Product Hunt"
+  - id: "solidot"
+    name: "Solidot 奇客资讯"
+  - id: "sputniknewscn"
+    name: "俄罗斯卫星通讯社 (中文)"
+  - id: "steam"
+    name: "Steam 游戏平台"
+  - id: "xueqiu"
+    name: "雪球财经"
+  - id: "zaobao"
+    name: "联合早报"
+
+
+# ======== 重新编排为统一热点清单 + 自动过滤旧内容 ========
+merge:
+  enable: true                      # 开启全网热点合并清单
+  name: "全网热点总排行"            # 推送标题
+  limit: 50                         # 每期只展示前50条最热（可自行改）
+  deduplication:
+    enable: true                    # 开启去重（标题相似度 > 85% 视为同一件事）
+    history_days: 2                 # 保留最近2天的历史，用于过滤旧热点（推荐2~3天）
+  sort_by: "heat"                   # 按热度排序（可选：heat / time）
+  include_platforms: true           # 每条热点后面带【来源平台】，方便溯源
+  min_appearances: 2                # 只保留至少在2个以上平台出现的热点（过滤噪音，神器！）
+
+sections:
+  - name: "全网热点总排行（去重新热）"
+    type: merge
+    limit: 50
+    min_appearances: 2
+    deduplication:
+      enable: true
+      history_days: 2
+
+  - name: "各大平台原榜（保留原始）"
+    type: platforms
+    limit: 10                     # 每个平台只取前10条，防止太长
+
+# 全局过滤旧内容（即使不开启merge，也有效）
+history:
+  enable: true
+  days: 2                        # 所有推送自动过滤2天内已出现过的条目
+
+# 推送内容精简
+item:
+  show_platform: true           # 显示来源平台
+  show_rank: true               # 显示排名
+  max_title_length: 50          # 标题过长自动截断
