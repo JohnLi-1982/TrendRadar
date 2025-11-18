@@ -99,5 +99,16 @@ platforms:
     name: "抖音"
   - id: "zhihu"
     name: "知乎"
-  
+  - id: "sspai"               
+    name: "少数派"
+  - id: "cls"                 
+    name: "财联社电报"
+  - id: "hupu"                
+    name: "虎扑热帖"
+  - id: "ithome"              
+    name: "IT之家"
+  - id: "v2ex"                
+    name: "V2EX"
+  - id: "juejin"              
+    name: "掘金"
 
