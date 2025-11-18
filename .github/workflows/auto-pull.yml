@@ -1,0 +1,22 @@
+name: Auto Pull on Push
+
+on:
+  push:
+    branches:
+      - master          # 或者 master、dev，随你主分支
+
+jobs:
+  sync:
+    runs-on: self-hosted   # 必须写这个
+    steps:
+      - name: Git pull latest code
+        run: |
+          cd /Users/lixiaoxu/AI/Labs/TrendRadar          # 改成你的路径，例如 /home/user/TrendRadar
+          git reset --hard origin/master
+          git clean -fd
+          git pull --ff-only
+          
+      # 如果你还想重启服务（例如 pm2、docker、systemd），继续加
+      # - name: Restart Service
+      #   run: |
+      #     pm2 reload trendradar   # 或者 systemctl restart your-service
