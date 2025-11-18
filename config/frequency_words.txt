@@ -94,12 +94,11 @@ DJI
 
 机器人
 
-京东
-刘强东
-
 字节
 bytedance
 张一鸣
+
+Grok
 
 xAI
 特斯拉
@@ -107,6 +106,20 @@ xAI
 
 微软
 Microsoft
+
+LLAMA
+meta
+ollama
+
+Copilot
+
+Facebook
+苹果
+IPhone
+Apple
+
+三星
+台积电
 
 英伟达
 NVIDIA
