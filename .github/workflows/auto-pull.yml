@@ -1,6 +1,9 @@
 name: Auto Pull on Push
 
 on:
+  schedule:
+    - cron: '*/30 * * * *'    # 每5分钟检查一次（可改成 */10）
+  workflow_dispatch:         # 还支持手动触发
   push:
     branches:
       - master          # 或者 master、dev，随你主分支
