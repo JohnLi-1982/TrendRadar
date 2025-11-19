@@ -1,40 +1,65 @@
 半导体
 芯片
 
+mcp
+
+英特尔
+Intel
+
+闪迪
+西部数据
+GlobalAI
+
+Cursor
+IDE
+
+
+亚马逊
+amason
+
+网络安全
+关税
+
 科技
-
 纳米
-
 生物
-
 煤炭
-
 农业
-
-
+银行
 光伏
 军工
 
+泡沫
+
+电动汽车
+新能源
+锂电池
+能源
+天然气
+
+石油
+原油
+
+AI原生
+云原生
+AI应用
+
 跳水
 涨停
-
-前景
-
-看好
-
-看多
-
 拉升
 
-新能源
-股市
+前景
+看好
+看多
+
+
+
 
 迈为
 中来
 
 科创
 创业
-
 创新
 
 储能
@@ -45,6 +70,7 @@ DeepSeek
 
 LLM
 大模型
+算力
 
 ASR
 语音识别
@@ -52,46 +78,23 @@ ASR
 创新药
 
 黄金
-
 稀土
 
-AGC
-
+AGI
 AIGC
 
 文生图
-
 文生视频
-
-锂电池
-
-能源
-
-算力
 
 QWen
 千问
 阿里
 
-腾讯
-游戏
-
-网易
-
-华为
-鸿蒙
-HarmonyOS
-任正非
-
 比亚迪
 王传福
 
-大疆
-DJI
-
 宇树
 王兴兴
-
 机器人
 
 字节
@@ -99,33 +102,40 @@ bytedance
 张一鸣
 
 Grok
-
 xAI
 特斯拉
 马斯克
 
 微软
 Microsoft
+Copilot
 
 LLAMA
 meta
 ollama
-
-Copilot
 
 Facebook
 苹果
 IPhone
 Apple
 
+AMD
+高通
+
+数据中心
+data center
+
+DRAM
+内存
+晶圆
+
 三星
+SamSung
 台积电
 
 英伟达
 NVIDIA
 黄仁勋
-
-AMD
 
 谷歌
 google
@@ -150,8 +160,6 @@ ai
 
 自动驾驶
 
-机器人
-
 国产
 中国
 
@@ -161,19 +169,16 @@ ai
 
 芯片
 光刻机
-
 光刻胶
 
 液冷
 
 吉瓦
-
 GW
 
 科技
 
 核能
-
 水电站
 雅鲁藏布江
 
